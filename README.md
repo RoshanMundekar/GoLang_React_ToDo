@@ -74,6 +74,13 @@ go run main.go
 
 ---
 
+## 📹 Demo Video
+
+![Candidate Management System Demo](screenshots/Go1.gif)
+
+> The above GIF demonstrates adding, editing, and deleting candidates via the web interface.
+
+
 ## 📃 License
 
 MIT License
