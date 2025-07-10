@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.create-user-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px);
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f8fa;
+}
+
+.create-user-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    width: 100%;
+    max-width: 480px;
+    transition: transform 0.3s ease;
+}
+
+.create-user-card:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.create-user-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-weight: 500;
+    color: #555;
+    font-size: 15px;
+}
+
+input {
+    padding: 14px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    transition: border 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #10a7ec;
+    box-shadow: 0 0 0 3px rgba(16, 167, 236, 0.2);
+}
+
+input::placeholder {
+    color: #aaa;
+    font-weight: 300;
+}
+
+.submit-button {
+    background-color: #10a7ec;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.submit-button:hover {
+    background-color: #0d8ec7;
+}
+
+.submit-button:disabled {
+    background-color: #b0e0f6;
+    cursor: not-allowed;
+}
+
+.button-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.spinner {
+    width: 18px;
+    height: 18px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.error-message {
+    background-color: #fef2f2;
+    color: #ef4444;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.success-message {
+    background-color: #f0fdf4;
+    color: #22c55e;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .create-user-card {
+        padding: 25px 20px;
+    }
+    
+    input {
+        padding: 12px 14px;
+    }
+    
+    .submit-button {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .create-user-card {
+        padding: 20px 15px;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+    }
+}
